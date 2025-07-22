@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Staff Sign Up</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Glowing glitter effect around the box */
+    .glitter {
+      position: relative;
+      animation: glow 2s infinite alternate;
+      box-shadow: 0 0 20px rgba(22, 54, 179, 0.2),
+                  0 0 40px rgba(210, 17, 201, 0.15),
+                  0 0 60px rgba(228, 114, 8, 0.1);
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 10px rgba(125, 20, 64, 0.1),
+                    0 0 20px rgba(11, 195, 63, 0.1),
+                    0 0 30px rgba(231, 231, 12, 0.1);
+      }
+      100% {
+        box-shadow: 0 0 20px rgba(193, 26, 205, 0.3),
+                    0 0 40px rgba(132, 76, 104, 0.2),
+                    0 0 60px rgba(6, 43, 228, 0.15);
+      }
+    }
+
+    /* Popup animation */
+    .popup {
+      animation: popupIn 1s ease-out forwards;
+      transform: scale(0.8);
+      opacity: 0;
+    }
+
+    @keyframes popupIn {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url(360_F_292203735_CSsyqyS6A4Z9Czd4Msf7qZEhoxjpzZl1.jpg);">
+
+  <div class="popup glitter relative bg-black p-8 rounded-xl w-full max-w-2xl z-10 overflow-hidden">
+    <!-- Title -->
+    <h2 class="text-2xl text-center font-bold text-black bg-white px-6 py-2 rounded-full mb-6 w-fit mx-auto z-20">STAFF SIGN UP PAGE</h2>
+
+    <!-- Form -->
+    <form class="space-y-4 text-white font-semibold z-20 relative">
+      <div>
+        <label class="block text-white">NAME:</label>
+        <input type="text" class="w-full border border-black px-4 py-2 rounded-md bg-white text-black" />
+      </div>
+
+      <div>
+        <label class="block text-white">VEC FOODS:</label>
+        <input type="text" class="w-full border border-black px-4 py-2 rounded-md bg-white text-black" />
+      </div>
+
+      <div>
+        <label class="block text-white">PHONE:</label>
+        <input type="tel" class="w-full border border-black px-4 py-2 rounded-md bg-white text-black" />
+      </div>
+
+      <div>
+        <label class="block text-white">PASSWORD:</label>
+        <input type="password" class="w-full border border-black px-4 py-2 rounded-md bg-white text-black" />
+      </div>
+
+      <div>
+        <label class="block text-white">CONFIRM PASSWORD:</label>
+        <input type="password" class="w-full border border-black px-4 py-2 rounded-md bg-white text-black" />
+      </div>
+
+      <div class="text-center pt-4">
+        <button type="submit" class="bg-white text-black px-6 py-2 rounded-full hover:bg-gray-800 hover:text-white transition duration-300">Sign Up</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
